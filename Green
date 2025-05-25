@@ -1,0 +1,199 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Green Thumbs - Helping Filipino Farmers</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f6f9f6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #2d6a4f;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #40916c;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #d8f3dc;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 3rem;
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    footer {
+      background-color: #2d6a4f;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    .tip {
+      background-color: #e9f5e9;
+      padding: 1rem;
+      border-left: 5px solid #2d6a4f;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form input[type="submit"] {
+      background-color: #2d6a4f;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    form input[type="submit"]:hover {
+      background-color: #40916c;
+    }
+    .slideshow {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      height: 400px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      border-radius: 10px;
+      background: #ddd;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .slideshow img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: contain;
+      background-color: #f6f9f6;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slideshow img.active {
+      opacity: 1;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Green Thumbs</h1>
+    <p>Helping Filipino Farmers Grow Smarter</p>
+  </header>
+
+  <nav>
+    <a href="#calendar">Crop Calendar</a>
+    <a href="#weather">Weather</a>
+    <a href="#tips">Farming Tips</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="calendar">
+      <h2>Crop Calendar</h2>
+      <p>Here is a sample guide for planting:</p>
+      <ul>
+        <li><strong>January - March:</strong> Start planting rice and vegetables like eggplant and tomato.</li>
+        <li><strong>April - June:</strong> Ideal for corn and mango harvesting.</li>
+        <li><strong>July - September:</strong> Plant leafy vegetables and monitor for typhoons.</li>
+        <li><strong>October - December:</strong> Prepare soil, good for root crops like sweet potato.</li>
+      </ul>
+    </section>
+
+    <section id="weather">
+      <h2>Weather Updates</h2>
+      <p>Check your local weather updates:</p>
+      <iframe src="https://www.pagasa.dost.gov.ph" width="100%" height="300" title="PAGASA Weather"></iframe>
+    </section>
+
+    <section id="tips">
+      <h2>Farming Tips</h2>
+      <div class="tip">🌱 Use compost to enrich your soil naturally and reduce costs.</div>
+      <div class="tip">🚿 Water plants early in the morning to avoid too much evaporation.</div>
+      <div class="tip">🛡️ Watch for pests weekly to prevent damage before it spreads.</div>
+    </section>
+
+    <section id="about">
+      <h2>About the Creators</h2>
+      <p>Meet the team behind Green Thumbs:</p>
+      <div class="slideshow">
+        <img src="farm1.jpeg" alt="Creator 1" class="active" />
+        <img src="farm2.jpeg" alt="Creator 2" />
+        <img src="farm3.jpeg" alt="Creator 3" />
+      </div>
+      <p>GROUP 5 BSIT - 1B</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="4" required></textarea><br />
+
+        <input type="submit" value="Send" />
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Green Thumbs | Built to help Filipino farmers 🌾
+    <a href="https://www.facebook.com/profile.php?id=61575949751310" target="_blank" rel="noopener" aria-label="Facebook Profile" style="margin-left: 1rem; vertical-align: middle; display: inline-block;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24" style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.3));">
+        <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.59l-.467 3.622h-3.123V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/>
+      </svg>
+    </a>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slideshow img');
+    let current = 0;
+
+    function showNextSlide() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 3000);
+  </script>
+</body>
+</html>
